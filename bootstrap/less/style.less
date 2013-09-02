@@ -1,0 +1,806 @@
+@darkgreen: rgb(25,50, 37);
+@midgreen: rgb(60,175, 70);
+@lightgreen: rgb(200, 205, 147);
+@midcreen: rgb(153, 170, 57);
+@midgray: rgb(115, 115, 115);
+@lightgreen:rgb(210, 210, 85); // (used for panel BG)
+@verylightgray: rgb(237, 237, 237); // (used for panel BG)
+
+
+
+.border-radius (@radius: 0px 30px 30px 0) {
+  border-radius: @radius;
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+}
+.transition (@transition) {
+	-webkit-transition: @transition;  
+	-moz-transition:    @transition;
+	-ms-transition:     @transition; 
+	-o-transition:      @transition;  
+}
+
+.opacity(@opacity: 1) {
+	@ieOpacity: @opacity * 100;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=@{ieOpacity})";
+	filter: ~"alpha(opacity=@{ieOpacity})";	
+	opacity: @opacity;
+}
+
+.btn {
+	border: none;
+	box-shadow: none;
+	text-shadow: none;
+	background-image: none;
+}
+
+
+.bottom {
+	margin-bottom: 60px;
+}
+
+
+
+/*
+	TYPOGRAPHY ----------------------------------------------------------------------------
+	-------------------------------------------------------------------------------------
+*/
+
+h1 , h2, h3 , h4 , h5 ,h6 {
+	color: @darkgreen;
+}
+
+p {
+	color: #737373;
+}
+
+a, a:hover {
+	text-decoration: none;
+}
+
+
+
+/*
+	NAVIGATION ----------------------------------------------------------------------------
+	-------------------------------------------------------------------------------------
+*/
+@import "../less/navigation.less";
+
+
+
+/*
+	HEADER ----------------------------------------------------------------------------
+	-------------------------------------------------------------------------------------
+*/
+.header-log-in {
+	h4 {
+		color: darkgray;
+	}
+}
+
+
+
+
+/*
+	LEFT COLUMN --------------------------------------------------------------------------
+	-------------------------------------------------------------------------------------
+*/
+
+.left-col, .right-col {
+	p {
+		//font-size: 16px;
+		max-width: 400px;
+	}
+
+	h2 {
+		margin-bottom: 30px;
+	}
+
+	h3 {
+		margin-top: 5px;
+		font-weight: 700;
+	}
+}
+
+.news {
+	border-right: 1px solid black;
+}
+
+.left-col {
+
+	a {
+		color: @lightgreen;
+		.transition(0.2s all)
+	}
+	a:hover {
+		color: @darkgreen;
+	}
+
+	.section-title-large-col {
+		background: @lightgreen;
+	}
+
+	article {
+		border-bottom: 1px solid @verylightgray;
+		padding-bottom: 10px;
+		margin-bottom: 20px;
+	}
+}
+
+.right-col {
+
+	a {
+		color: @darkgreen;
+		.transition(0.2s all)
+	}
+	a:hover {
+		color: @lightgreen;
+	}
+
+	.read-more {
+		display: inline-block;
+		margin-top: 20px;
+		color: @lightgreen;
+
+	}
+	.read-more:hover {
+		color: @darkgreen;
+		.transition(0.2s all);
+	}
+}
+
+
+/*
+	CENTER COLUMN ----------------------------------------------------------------------------
+	-------------------------------------------------------------------------------------
+*/
+.center-col {
+	span {
+		background: @verylightgray;
+		display: block;
+		padding: 0 0 15px 0;
+	}
+
+	h2 {
+	background: @midgreen;
+	padding: 10px 5px;
+	height: 36px;
+
+	color: white;
+	text-indent: 10px;
+	line-height: 15px;
+	font-size: 14px;
+	}
+
+	p {
+		margin: 0 5px;
+		font-size: 12px;
+	}
+
+	a {
+
+	}
+}
+
+
+.events-title {
+	//@include border-radius(35px);
+	//width: 70px;
+	//height: 70px;
+	//background: black;
+}
+.events-title-circle {
+	background: @lightgreen;
+	position: relative;
+	//height:100px;
+	max-width: 150px;
+	float: left;
+	margin-right: 10px;
+
+	.border-radius(100px);
+
+		h2 {
+			position: absolute;
+			color: white;
+			font-size: 15px;
+			text-align: center;
+			margin: 0;
+			background: none;
+			margin-top: 44%;
+			width: 100%;
+			padding: 0;
+		}
+
+
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+}
+
+.events-list {
+	h3 {
+		font-size: 18px;
+	}
+}
+
+
+
+
+/*
+	ICONS & GLYPHS ----------------------------------------------------------------------------
+	-------------------------------------------------------------------------------------
+*/
+
+
+.icon-single {
+	width: 70px;
+	float: left;
+	margin: 25px;
+	p {
+		clear: both;
+		font-size: 10px;
+		text-align: center;
+		margin-top: 20px;
+	}
+
+	.glyphicon {
+		font-size: 70px;
+		color: @darkgreen;
+	}
+}
+
+.icon-group {
+	background: @verylightgray;
+	display: block;
+	overflow: hidden;
+}
+
+
+/*
+	HEADER ----------------------------------------------------------------------------
+	-------------------------------------------------------------------------------------
+*/
+.header {
+	margin-bottom: 50px;
+}
+
+
+.header-log-in {
+	text-align: right;
+	color: darkgray;
+}
+
+.header-logo { 
+	margin-bottom: 40px;
+}
+
+.heading-light {
+	background: @lightgreen;
+	color: white;
+	font-size: 16px;
+	padding: 10px 15px;
+	margin-bottom: 60px;
+	margin-top: 30px;
+
+	.border-radius;
+}
+
+
+
+.heading-dark {
+	background: @darkgreen;
+	color: white;
+	font-size: 16px;
+	padding: 10px 15px;
+	margin-bottom: 60px;
+	margin-top: 30px;
+
+	.border-radius;
+}
+
+
+.heading-green {
+	background: @midgreen;
+	color: white;
+	font-size: 16px;
+	padding: 10px 15px;
+	//margin-bottom: 60px;
+	margin-top: 30px;
+}
+
+.no-heading {
+	margin-top: 98px;
+}
+
+
+/*
+	BUTTONS --------------------------------------------------------------------------
+	-------------------------------------------------------------------------------------
+*/
+.buttons-wrap {
+	display: block;
+	margin-bottom: 30px;
+}
+
+
+/*
+	TABS --------------------------------------------------------------------------
+	-------------------------------------------------------------------------------------
+*/
+.nav > li > a:hover, .nav > li > a:focus {
+	background: @midgreen;
+}
+.nav-tabs li {
+	background: @midgreen;
+	border: none;
+}
+
+.nav-tabs a {
+	color: white !important;
+	border: none !important;
+	margin-right: 0 !important;
+}
+
+.nav-tabs {
+	margin-right: 0;
+}
+.nav-tabs a:hover {
+	border: none !important;
+}
+
+.tab-content {
+	margin-top: 30px;
+	p:first-child {
+		font-weight: bold;
+	}
+}
+
+
+
+/*
+	SLIDER --------------------------------------------------------------------------
+	-------------------------------------------------------------------------------------
+*/
+.thumbnails {
+	.thumbnail-demo {
+		cursor: pointer;
+		float: left;
+		p {
+			color: white;
+			font-size: 16px;
+			margin: 10px;
+		}
+	}
+}
+.rounded {
+	.border-radius(300px);
+	.thumb-label {
+		text-align: center;
+		line-height: 112px;
+	}
+}
+
+.thumbnail-demo {
+	background: red;
+	height: 130px;
+	width: 130px;
+	position: relative;
+	overflow: hidden;
+	margin: 10px 20px 10px 0;
+
+	img {
+		width: 100%;
+		height: auto;
+		position: absolute;
+		z-index: 10;
+	}
+	.thumb-over {
+		position: absolute;
+		z-index: 20;
+		background: @lightgreen;
+		height: 130px;
+		width: 130px;
+		.opacity(0);
+		.transition(0.3s  all);
+
+	}
+}
+
+.thumb-wrapper {
+	margin-bottom: 10px;
+	float: left;
+	p {
+		clear: both;
+		margin: 0;
+		font-size: 12px;
+	}
+}
+
+.thumbnail-description-round {
+	text-align: center;
+	width: 130px;
+}
+
+.thumbnail-demo:hover .thumb-over {
+	.opacity(1);
+}
+
+/*
+	SLIDER --------------------------------------------------------------------------
+	-------------------------------------------------------------------------------------
+*/
+
+.slider {
+	position: relative;
+	height: 380px;
+	span {
+		position: absolute;
+		display: block;
+		height: 380px;
+		width: 100%;
+	}
+	margin-bottom: 30px;
+}
+
+
+.slide-front {
+	z-index: 1000000000;
+}
+
+.slider-nav {
+	width: 100%;
+	margin-top: -20px;
+	span {
+		//background: red;
+		//display: block;
+		//height: 300px;
+	}
+
+	a {
+		color: white;
+		//@include transition(0.2s , all);
+	}
+}
+
+.slide-button {
+	background: darkgray;
+	height: 120px;
+	display: block;
+	margin-bottom: 10px;
+    margin-right: 1.3%;
+   	float: left;
+   	height: 120px;
+   	width: 32%;
+   	cursor: pointer;
+
+   	p {
+   		padding: 10px;
+   		font-size: 16px;
+   		//font-family: $fontbold;
+   		font-weight: 900;
+   		color: white;
+   	}
+}
+
+.slide-one {
+	background: @lightgreen;
+}
+
+.slide-two {
+	background: lightgray;
+}
+
+.slide-three {
+	background: @midgray;
+}
+
+
+
+.icon-thumbnails {
+	.oxera-button {
+		max-width: none;
+	}
+	.thumbnail {
+		margin-bottom: 30px;
+	}	
+
+	h3 {
+		text-align: center;
+	}
+
+	p {
+		font-size: 12px;
+		text-align: center;
+	}
+
+	button {
+		margin-top: 40px;
+	}
+}
+
+
+
+
+
+/*
+	SWATCHES ----------------------------------------------------------------------------
+	-------------------------------------------------------------------------------------
+*/
+
+.swatches {
+	margin-top: 50px;
+}
+
+.swatches-single {
+	margin-bottom: 30px;
+	position: relative;
+
+	img {
+		width: 100%;
+		height: auto;
+	}
+
+	p {
+		position: absolute;
+		top: 15px;
+		left: 15px;
+		color: white;
+		font-size: 10px;
+	}
+}
+
+//Don't add any other values outside the background color
+.swatch-1 {
+	background: @darkgreen;
+}
+.swatch-2 {
+	background: @midgreen;
+}
+.swatch-3 {
+	background: @lightgreen;
+}
+.swatch-4 {
+	background: @midcreen;
+}
+
+.swatch-5 {
+	background: @midgray;
+}
+
+.swatch-6 {
+	background: @lightgreen;
+}
+
+.swatch-7 {
+	background: @verylightgray;
+}
+
+
+
+.oxera-button {
+    border: 0 none;
+    padding: 15px 25px;
+    font-size: 13px;
+    display: block;
+    color: white;
+    width: 100%;
+    max-width: 150px;
+
+    //@include transition(0.2s, all);
+    //&:hover {
+    	//background: darkgray;
+    //}
+    .transition(0.2s all);
+}
+
+.oxera-button:hover {
+	background: @midgreen;
+}
+
+
+/*
+	NAVIGATION ----------------------------------------------------------------------------
+	-------------------------------------------------------------------------------------
+*/
+.navigation-dropdown {
+	background: @verylightgray;
+	height: 200px;
+	margin-bottom: 30px;
+}
+
+.dropdown-menu {
+    font-size: 14px;
+    list-style: none outside none;
+    padding: 10px;
+}
+
+
+footer {
+	background: #d2d2b9;
+	height: 200px;
+	margin-top: 50px;
+
+	h2 {
+		padding: 0 20px;
+		color: white;
+	}
+}
+
+.nav-pills a:hover {
+	color: white;
+}
+
+.nav-pills a {
+	background: @verylightgray;
+	margin-right: 5px;
+}
+
+.oxera-nav-pills { 
+	margin-bottom: 30px;
+}
+
+.oxera-bredcrumb {
+	height: 100px;
+	background: @verylightgray;
+}
+
+
+.badge {
+	background: rgba(0,0,0,0.25);
+	line-height: 13px;
+	font-size: 10px;
+	font-weight: 100;
+}
+
+.alert, .progress-bar, .progress, .list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus {
+	border: transparent;
+	box-shadow: none;
+	text-shadow: none;
+	background-image: none;
+}
+
+
+.oxera-media {
+	.media-object {
+		width: 130px;
+	}
+
+	.media {
+		background: @verylightgray;
+		margin-top: 30px;
+
+		h4 {
+			margin-top: 10px;
+		}
+	}
+}
+
+.panel-success > .panel-heading {
+	background: @midgreen;
+	background-image: none !important;
+	border: none;
+}
+
+.oxera-accordion {
+	.panel {
+		.border-radius(0 17px 17px 0);
+		background: @verylightgray;
+		border: none;
+		margin-bottom: 15px;
+	}
+
+	.panel-heading{
+		.border-radius(0 30px 30px 0);
+	}
+
+	.panel-title {
+		color: white;
+	}
+
+	.panel-icon {
+		float: right;
+		font-size: 14px;
+		height: 24px;
+		width: 24px;
+		background: @darkgreen;
+		.opacity(0.3);
+		.border-radius(200px);
+		margin-top: -4px;
+		text-indent: 4px;
+		line-height: 23px;
+		margin-right: -8px;
+	}
+}
+
+.panel-group .panel-heading + .panel-collapse .panel-body {
+	border: none;
+}
+
+
+
+.oxera-form {
+	background: @verylightgray;
+
+	input, textarea {
+		border: 1px solid @verylightgray;
+		box-shadow: none;
+	}
+
+	textarea {
+		min-width: 200px;
+	}
+
+	input {
+		margin-bottom: 20px;
+	}
+}
+
+.form-left {
+	padding: 20px 20px 0 20px;
+}
+
+.form-right {
+	padding: 0 20px 0 ;
+}
+
+.oxera-form-submit {
+	margin-top: 20px;
+	//margin-bottom: 20px
+}
+
+.form-title h3 {
+	margin-top: 0;
+}
+
+.form-title p {
+	margin-bottom: 30px;
+	max-width: 220px;
+}
+
+/*
+	MEDIA QUERIES ----------------------------------------------------------------------------
+	-------------------------------------------------------------------------------------
+*/
+@media (min-width: 768px) { 
+	.slider {
+		width: 73.5%;
+		margin-right: 1.5%;
+		float: left;
+	}
+	.slider-nav {
+		width: 25%;
+		margin-top: 0;
+		float: right;
+	} 
+	.slide-button {
+		width: 100%;
+	}
+
+}
+
+
+/* Extra small devices (phones, up to 480px) */
+/* No media query since this is the default in Bootstrap */
+
+
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px ) {  
+
+	.form-left {
+		padding: 25px 0px 25px 25px;
+	}
+	.form-right {
+		padding: 25px 25px 10px 0;
+	}
+
+	.oxera-form textarea {
+		height: 150px;
+	}
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+ }
